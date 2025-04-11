@@ -10,12 +10,11 @@ function SearchLocation() {
   const [error, setError] = useState(null); // stato per gestire eventuali errori
 
   const handleChange = (e) => {
-    setLocationValue(e.target.value); // aggiorna lo stato con il valore dell'input
+    setLocationValue(e.target.value);
   };
 
   const handleSearch = async () => {
-    if (!locationValue) return; // Non fare nulla se il campo è vuoto
-
+    if (!locationValue) return;
     try {
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${locationValue}&appid=778e096865db2c5853526e3d719a78c9&units=metric`
@@ -24,10 +23,10 @@ function SearchLocation() {
         throw new Error("Failed to fetch weather data");
       }
       const data = await response.json();
-      setWeatherData(data); // memorizza i dati meteo
+      setWeatherData(data);
     } catch (err) {
-      setError("Failed to fetch data"); // gestisce l'errore
-      setWeatherData(null); // in caso di errore, resetta i dati meteo
+      setError("Failed to fetch data");
+      setWeatherData(null);
     }
   };
 

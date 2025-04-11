@@ -11,7 +11,7 @@ function ColorSchemesExample() {
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Preferiti</Nav.Link>
-            <Nav.Link href="#pricing">Crediti</Nav.Link>
+            <Nav.Link href="https://openweathermap.org/">Crediti</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
