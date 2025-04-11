@@ -15,8 +15,9 @@ function ColorSchemesExample() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            {/* Usa Link per la navigazione interna */}
-            <Nav.Link href="#features">Preferiti</Nav.Link>
+            <Nav.Link as={Link} to="/recenti-location">
+              Recenti
+            </Nav.Link>
             <Nav.Link href="https://openweathermap.org/">Crediti</Nav.Link>
           </Nav>
         </Container>

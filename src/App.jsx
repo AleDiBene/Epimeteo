@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Homepage from "./components/Homepage.jsx";
 import CityDetails from "./components/CityDetails.jsx";
+import RecentLocation from "./components/RecentLocation.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/city-details" element={<CityDetails />} />
+        <Route path="/recenti-location" element={<RecentLocation />} />
       </Routes>
       <Footer />
     </BrowserRouter>
