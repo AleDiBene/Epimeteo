@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Importa il Link da React Router DOM
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,9 +8,14 @@ function ColorSchemesExample() {
     <>
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Epimeteo</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">
+            Epimeteo
+          </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+            {/* Usa Link per la navigazione interna */}
             <Nav.Link href="#features">Preferiti</Nav.Link>
             <Nav.Link href="https://openweathermap.org/">Crediti</Nav.Link>
           </Nav>

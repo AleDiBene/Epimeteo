@@ -9,7 +9,7 @@ const Footer = () => {
       bg="primary"
       data-bs-theme="dark"
       variant="dark"
-      className="mt-5 pt-4 fixed-bottom"
+      className="mt-5 pt-4"
     >
       <Container>
         <Row className="w-100 g-0 ">

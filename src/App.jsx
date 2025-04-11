@@ -1,19 +1,25 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  BrowserRouter,
+} from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-import RecentLocation from "./components/RecentLocation.jsx";
 import Footer from "./components/Footer.jsx";
-import SearchLocation from "./components/Search.jsx";
-import Caorusel from "./components/Caorusel.jsx";
+import Homepage from "./components/Homepage.jsx";
+import CityDetails from "./components/CityDetails.jsx";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <RecentLocation />
-      <SearchLocation />
-      <Caorusel />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/city-details" element={<CityDetails />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
