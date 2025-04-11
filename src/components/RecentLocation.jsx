@@ -34,10 +34,15 @@ function WeatherComponent() {
   }
 
   return (
-    <Row className="p-5 ">
-      <h1> Recenti</h1>
+    <Row className="p-5 bg-light justify-content-center g-0">
+      <h1 className="text-center w-100">Recenti</h1>
       {weatherData.map((cityData, index) => (
-        <Col key={index} sm={12} md={4} className="text-center">
+        <Col
+          key={index}
+          sm={12}
+          md={4}
+          className="d-flex justify-content-center align-items-center mb-4"
+        >
           <Card className="px-5 text-center w-50">
             <Card.Img
               variant="top"
@@ -45,7 +50,7 @@ function WeatherComponent() {
               alt={cityData.weather[0].description}
             />
             <Card.Body>
-              <Card.Title>{cityData.name}</Card.Title>
+              <Card.Title className="fw-bold">{cityData.name}</Card.Title>
               <Card.Text>Temperature: {cityData.main.temp}°C</Card.Text>
             </Card.Body>
           </Card>
